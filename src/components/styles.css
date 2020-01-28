@@ -1,4 +1,4 @@
-.App {
+.Search {
   text-align: center;
   background-color: #282c34;
   min-height: 100vh;
@@ -36,6 +36,7 @@
   color: #000;
   list-style-type: none;
 }
+
 .list-item:focus {
   outline: 4px solid orangered;
 }

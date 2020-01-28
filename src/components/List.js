@@ -1,8 +1,5 @@
 import React from "react";
-
-const ListItem = ({tabIndex, item }) => {
-  return <li tabIndex={tabIndex} className='list-item'>{item}</li>;
-};
+import ListItem from './ListItem'
 
 const List = ({ items }) => {
   return (

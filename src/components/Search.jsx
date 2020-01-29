@@ -1,9 +1,10 @@
 import React, { useRef, useState, useEffect } from "react";
-import Hotkeys from "react-hot-keys";
 import { data } from "../data";
-import List from "./List";
 import "normalize.css";
 import "./styles.css";
+import List from "./List";
+import Input from "./Input";
+import HotkeysWrapper from "./HotkeysWrapper";
 
 const Search = () => {
   const ref = useRef();
@@ -49,7 +50,7 @@ const Search = () => {
   const tab = (e, step) => {
     e.preventDefault();
     let nextTabIndex = tabIndex + step;
-    if (nextTabIndex > filtered.length + 1 ) {
+    if (nextTabIndex > filtered.length + 1) {
       if (e.repeat) {
         return;
       }
@@ -62,7 +63,7 @@ const Search = () => {
     }
     const nextElement = document.querySelector(`[tabIndex="${nextTabIndex}"]`);
     nextElement.focus();
-  }
+  };
 
   // Hotkeys onKeyDown handler
   const onKeyDown = (keyName, e, handle) => {
@@ -76,31 +77,15 @@ const Search = () => {
 
   return (
     <div className="Search">
-      <Hotkeys
-        filter={e => {
-          if (
-            ((e.key === "j" && e.ctrlKey !== true) ||
-              (e.key === "k" && e.ctrlKey !== true)) &&
-            e.target.nodeName === "INPUT"
-          ) {
-            return false;
-          }
-          return true;
-        }}
-        allowRepeat={true}
-        keyName="ctrl+j,ctrl+k"
-        onKeyDown={onKeyDown}
-      >
-        <input
-          tabIndex={1}
-          ref={ref}
-          onInput={e => setInput(e.target.value)}
-          type="text"
-          placeholder="Seach"
-          className="input"
-        ></input>
+      <div className="info">
+        <p>Searchbar navigable with Ctrl+J and Ctrl+K.</p> 
+        <p>Stops at the edges if the shortcuts are repeated (press and hold).</p>
+        <p>Starts over if the shortcuts are not repeated.</p>
+      </div>
+      <HotkeysWrapper onKeyDown={onKeyDown}>
+        <Input ref={ref} onInput={e => setInput(e.target.value)} />
         {filtered.length > 0 ? <List items={filtered} /> : <></>}
-      </Hotkeys>
+      </HotkeysWrapper>
     </div>
   );
 };

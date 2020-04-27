@@ -7,3 +7,4 @@ rewrite in vanilla js
 npm  
 rename  
 clean package.json  
+add focus on "/"  

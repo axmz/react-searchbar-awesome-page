@@ -8,7 +8,7 @@ const Input = forwardRef((props, ref) => {
         {...props}
         tabIndex={1}
         type="text"
-        placeholder="Seach"
+        placeholder="Seach (numbers only)"
         className="Input"
       />
       <span className="input-span">CtrlJ / CtrlK</span>

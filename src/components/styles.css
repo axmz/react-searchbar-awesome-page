@@ -25,6 +25,7 @@ li {
   align-items: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding-left: calc(100vw - 100%)
 }
 
 .input-group {

@@ -1,17 +1,14 @@
 import React, { useState } from "react";
 import Search from 'react-searchbox-awesome'
-import Info from "./components/Info";
-import Github from "./components/Github";
+
 /*
 example data. USA states.
 the componenet requires an array of object with a property "title".
   []{title: string}
 */
-import { states } from './states.data' // example data. USA states.
-import { useHistory } from "react-router-dom";
+import { states } from './states.data'
 
 function App() {
-  const history = useHistory()
   const [filtered, setFiltered] = useState([])
 
   // here the data is filtered as you search
@@ -29,19 +26,17 @@ function App() {
 
   /*
     here you define what happens when you press enter. 
-    in our example we go to a route.
-    the route is taken from dataset property of the element.
-    this is possible because the entire object was stored in dataset.
+    note that the data that is passed to list element, is stored in the data-set attribute.
   */
   const enterHandler = (e) => {
     const searchitem = JSON.parse(e.target.dataset.searchitem)
-    history.push(searchitem.name)
+    console.log('Enter pressed', searchitem)
   }
 
   // same as above 
   const clickHandler = (e) => {
     const searchitem = JSON.parse(e.target.dataset.searchitem)
-    history.push(searchitem.name)
+    console.log('Click click!', searchitem)
   }
 
   // what to happen when escape is pressed. in our example - nothing.
@@ -49,13 +44,17 @@ function App() {
     console.log('Escape pressed')
   }
 
+  // this is to close the searchlist when you click outside of it.
   const clickOutsideHandler = (e) => {
     if (!e.target.closest(".ReactSearchboxAwesome")) {
       setFiltered([])
     }
   }
 
-  // the style defined here is passed to child elements, that inherit some styles like font size, color, line-height...
+  /* the style defined here is passed to child elements
+  note: children inherit some styles like font size, color, line-height...
+  there are some default styles as well.
+  */
   const style = {
     width: "calc(80% + (100vw - 100%))",
     color: "#333",               // children inherit
@@ -63,29 +62,23 @@ function App() {
     fontSize: "2.5rem",          // children inherit
     position: "absolute",
     top: "3rem",
-
-    // rounded corners example. 
-    // borderRadius: "15px",
-    // backgroundColor: "rgba(250,250,250,0.2)",    // children inherit
     boxShadow: "0 0 28px 2px rgba(0,0,0,0.1)",
     border: "none",
     overflow: "hidden",
-    zIndex: 2,
   }
 
+  // thats the style for the active element (hover, focus)
   const gradient = {
-    // backgroundImage: "linear-gradient(319deg, #bbff99 0%, #ffec99 37%, #ff9999 100%)",
-    // backgroundColor: "rgba(255,230,230,.3)",
-    backgroundColor: "pink",
+    backgroundImage: "linear-gradient(319deg, #bbff99 0%, #ffec99 37%, #ff9999 100%)",
   }
 
   return (
     <div
-      className={"App"}
       onClick={clickOutsideHandler}
+      className={"App"}
     >
       <Search
-        data={filtered} // array of the objects is passed. each object is saved in dataset of the correspondent element.
+        data={filtered} // array of the objects is passed. []{title: string}. each object is saved in dataset of the correspondent element.
         mapping={{ title: "name" }} // allows to map the title of search item and the name property in the filtered data.
         style={style} // child elements inherit some styles.
         activeStyle={gradient} // hover, focus, active color.
@@ -96,8 +89,6 @@ function App() {
         onClick={clickHandler} // applies only to the list "li" element
         onEsc={escHandler} // applies to the entire component
       />
-      <Info />
-      <Github />
     </div>
   )
 }

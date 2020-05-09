@@ -4,11 +4,11 @@ const Github = () => {
 
   return (
     <a
-      href="https://github.com/axmz/react-searchbar-awesome"
+      href="https://github.com/axmz/react-searchbox-awesome"
     >
       <div
         style={{
-          position: "absolute",
+          position: "fixed",
           right: "0",
           bottom: "0",
           fill: "white",

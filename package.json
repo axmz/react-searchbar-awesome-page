@@ -1,15 +1,15 @@
 {
-  "name": "react-searchbar-awesome-page",
+  "name": "react-searchbox-awesome-page",
   "version": "0.1.0",
   "private": false,
-  "description": "The coolest searchbar for React.js!",
-  "homepage": "https://axmz.github.io/react-searchbar-awesome-page",
+  "description": "The coolest searchbox for React.js!",
+  "homepage": "https://axmz.github.io/react-searchbox-awesome-page",
   "dependencies": {
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.1.2",
     "react-scripts": "^3.4.1",
-    "react-searchbar-awesome": "^1.0.0"
+    "react-searchbox-awesome": "^1.0.0"
   },
   "scripts": {
     "predeploy": "npm run build",

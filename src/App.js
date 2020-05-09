@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Search from 'react-searchbox-awesome'
 import Info from "./components/Info";
 import Github from "./components/Github";
@@ -54,6 +54,11 @@ function App() {
       setFiltered([])
     }
   }
+
+  useEffect(() => {
+    document.addEventListener('click', clickOutsideHandler)
+    return () => document.removeEventListener('click', clickOutsideHandler)
+  },[])
 
   // the style defined here is passed to child elements, that inherit some styles like font size, color, line-height...
   const style = {

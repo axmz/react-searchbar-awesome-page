@@ -51,6 +51,11 @@ function App() {
     }
   }
 
+  useEffect(() => {
+    document.addEventListener('click', clickOutsideHandler)
+    return () => document.removeEventListener('click', clickOutsideHandler)
+  },[])
+
   /* the style defined here is passed to child elements
   note: children inherit some styles like font size, color, line-height...
   there are some default styles as well.
@@ -74,7 +79,6 @@ function App() {
 
   return (
     <div
-      onClick={clickOutsideHandler}
       className={"App"}
     >
       <Search

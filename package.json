@@ -2,7 +2,7 @@
   "name": "react-searchbar-awesome-page",
   "version": "0.1.0",
   "private": false,
-  "homepage": "http://axmz.github.io/react-searchbar-awesome-page",
+  "homepage": "https://axmz.github.io/react-searchbar-awesome-page",
   "dependencies": {
     "react": "^16.13.1",
     "react-dom": "^16.13.1",

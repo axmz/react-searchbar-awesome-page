@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Search from 'react-searchbar-awesome'
 import Info from "./components/Info";
+import Github from "./components/Github";
 import { states } from './states.data' // example data. USA states.
 import { useHistory } from "react-router-dom";
 
@@ -86,7 +87,6 @@ function App() {
       className={"App"}
       onClick={clickOutsideHandler}
     >
-      <Info />
       <div
         style={auxStyle}>
         <Search
@@ -102,6 +102,8 @@ function App() {
           onEsc={escHandler} // applies to the entire component
         />
       </div>
+      <Info />
+      <Github/>
     </div>
   )
 }

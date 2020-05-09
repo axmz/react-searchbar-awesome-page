@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/react-searchbar-awesome-page/static/css/main.fe5abe27.chunk.css",
-    "main.js": "/react-searchbar-awesome-page/static/js/main.2eb5cbe2.chunk.js",
-    "main.js.map": "/react-searchbar-awesome-page/static/js/main.2eb5cbe2.chunk.js.map",
+    "main.js": "/react-searchbar-awesome-page/static/js/main.d26a4207.chunk.js",
+    "main.js.map": "/react-searchbar-awesome-page/static/js/main.d26a4207.chunk.js.map",
     "runtime-main.js": "/react-searchbar-awesome-page/static/js/runtime-main.66724107.js",
     "runtime-main.js.map": "/react-searchbar-awesome-page/static/js/runtime-main.66724107.js.map",
     "static/js/2.4d7b9d91.chunk.js": "/react-searchbar-awesome-page/static/js/2.4d7b9d91.chunk.js",
     "static/js/2.4d7b9d91.chunk.js.map": "/react-searchbar-awesome-page/static/js/2.4d7b9d91.chunk.js.map",
     "index.html": "/react-searchbar-awesome-page/index.html",
-    "precache-manifest.e4a1cb8ec5e7d01514d95e0745ef87ed.js": "/react-searchbar-awesome-page/precache-manifest.e4a1cb8ec5e7d01514d95e0745ef87ed.js",
+    "precache-manifest.15b900338c4dff038680b6c52fc1b9d1.js": "/react-searchbar-awesome-page/precache-manifest.15b900338c4dff038680b6c52fc1b9d1.js",
     "service-worker.js": "/react-searchbar-awesome-page/service-worker.js",
     "static/css/main.fe5abe27.chunk.css.map": "/react-searchbar-awesome-page/static/css/main.fe5abe27.chunk.css.map",
     "static/js/2.4d7b9d91.chunk.js.LICENSE.txt": "/react-searchbar-awesome-page/static/js/2.4d7b9d91.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.66724107.js",
     "static/js/2.4d7b9d91.chunk.js",
     "static/css/main.fe5abe27.chunk.css",
-    "static/js/main.2eb5cbe2.chunk.js"
+    "static/js/main.d26a4207.chunk.js"
   ]
 }

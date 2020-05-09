@@ -1,14 +1,14 @@
 {
-  "name": "react-searchbar-awesome",
+  "name": "react-searchbar-awesome-page",
   "version": "0.1.0",
-  "private": true,
-  "homepage": "http://axmz.github.io/react-searchbar-awesome",
+  "private": false,
+  "homepage": "http://axmz.github.io/react-searchbar-awesome-page",
   "dependencies": {
-    "normalize.css": "^8.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-hot-keys": "^2.4.5",
-    "react-scripts": "^3.4.1"
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "^3.4.1",
+    "react-searchbar-awesome": "^1.0.0"
   },
   "scripts": {
     "predeploy": "npm run build",

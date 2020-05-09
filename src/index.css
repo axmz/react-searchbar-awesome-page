@@ -12,3 +12,21 @@ code {
     monospace;
 }
 
+.App {
+  overflow: hidden;
+  background-color: #282c34;
+  /* background-image: url("./assets/pine-forest.jpg"); */
+  background-size: cover;
+  min-height: 100vh;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding-left: calc(100vw - 100%);
+}
+
+::selection {
+  background: #ffb7b7; /* WebKit/Blink Browsers */
+}
